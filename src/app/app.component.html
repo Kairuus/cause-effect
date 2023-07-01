@@ -4,8 +4,8 @@
 
   </div>
   <div class="icons">
-    <a href="https://github.com/Kairuus" target="_blank" class="fa-brands fa-linkedin" ></a>
-    <a href="https://www.linkedin.com/in/victor-muniz-236842267/" target="_blank" class="fa-brands fa-github"></a>
+    <a href="https://www.linkedin.com/in/victor-muniz-236842267/" target="_blank" class="fa-brands fa-linkedin" ></a>
+    <a href="https://github.com/Kairuus" target="_blank" class="fa-brands fa-github"></a>
   </div>
 </header>
 <body class="main">
@@ -15,23 +15,27 @@
     </ul>
   </div>
   <div class="info">
-    <!-- <p id="empty" [hidden]="!empty">CLICK ON A NAME TO SEE ITS INFORMATION</p> -->
-    <div class="personal" >
-      <p>Personal Informations</p>
-        <div class="personal-flex">
-          <label>Name<br><input type="text" readonly [(ngModel)]="currentName"></label>
-          <label>Telephone Number<br><input type="text" readonly [(ngModel)]="currentTelephone"></label>
-          <label>Birthday<br><input type="text" readonly [(ngModel)]="currentBirthday"></label>
+    <p id="empty" [hidden]="!empty">CLICK ON A NAME TO SEE ITS INFORMATION</p>
+
+    <div [hidden]="empty">
+      <div class="personal"  >
+        <p>Personal Informations</p>
+          <div class="personal-flex">
+            <label>Name<br><input type="text" readonly [(ngModel)]="currentName"></label>
+            <label>Telephone Number<br><input type="text" readonly [(ngModel)]="currentTelephone"></label>
+            <label>Birthday<br><input type="text" readonly [(ngModel)]="currentBirthday"></label>
+          </div>
         </div>
+
+      <div class="address">
+        <p>Address Informations</p>
+          <div class="address-grid">
+            <label>Street<br><input type="text" readonly [(ngModel)]="currentStreet"></label>
+            <label>City<br><input type="text" readonly [(ngModel)]="currentCity"></label>
+            <label>State<br><input type="text" readonly [(ngModel)]="currentState"></label>
+            <label>Country<br><input type="text" readonly [(ngModel)]="currentCountry"></label>
+          </div>
       </div>
-    <div class="address" >
-      <p>Address Informations</p>
-        <div class="address-grid">
-          <label>Street<br><input type="text" readonly [(ngModel)]="currentStreet"></label>
-          <label>City<br><input type="text" readonly [(ngModel)]="currentCity"></label>
-          <label>State<br><input type="text" readonly [(ngModel)]="currentState"></label>
-          <label>Country<br><input type="text" readonly [(ngModel)]="currentCountry"></label>
-        </div>
     </div>
   </div>
 </body>

@@ -25,8 +25,6 @@ export class AppComponent {
   empty = true
   select = false
 
-
-
   currentName: string = '';
   currentStreet: string = '';
   currentCity: string = '';
@@ -36,6 +34,8 @@ export class AppComponent {
   currentBirthday: string = '';
 
   showInformation(item: any, listItem: HTMLElement){
+
+    this.empty = false
 
     let lis = document.querySelectorAll('li')
 
@@ -53,6 +53,5 @@ export class AppComponent {
     this.currentTelephone = item.telephone;
     this.currentBirthday = item.birthday;
 
-    this.empty = false
   }
 }
